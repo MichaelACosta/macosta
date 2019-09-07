@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Profile" />
     <div
       style={{
         display: "flex",
@@ -15,13 +15,13 @@ const IndexPage = () => (
         alignItems: "center",
         margin: "auto",
         borderRadius: 10,
-        width: 500,
+        minWidth: "50%",
       }}
     >
       <img
-        src="/imgs/macosta.jpeg"
-        alt="icon"
-        style={{ borderRadius: "50%", width: 100, marginRight: 40 }}
+        src="https://avatars2.githubusercontent.com/u/7400882?s=460&v=4"
+        alt="MichaelACosta Icon"
+        style={{ borderRadius: "50%", width: "10%", marginRight: 40 }}
       />
       <div>
         <p>macosta@inf.ufpel.edu.br</p>
