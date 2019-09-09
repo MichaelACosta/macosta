@@ -1,32 +1,35 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Row, Col } from "react-flexbox-grid"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Profile" />
-    <div
+    <Row
+      center="xs"
+      middle="xs"
       style={{
-        display: "flex",
-        background: "#fff",
-        border: "1px solid #f0f0f0",
-        padding: "20px 10px",
-        justifyContent: "center",
-        alignItems: "center",
-        margin: "auto",
-        borderRadius: 10,
-        minWidth: "50%",
+        marginTop: 50,
       }}
     >
-      <img
-        src="https://avatars2.githubusercontent.com/u/7400882?s=460&v=4"
-        alt="MichaelACosta Icon"
-        style={{ borderRadius: "50%", width: "10%", marginRight: 40 }}
-      />
-      <div>
-        <p>macosta@inf.ufpel.edu.br</p>
-      </div>
-    </div>
+      <Col xs={12} sm={4}>
+        <img
+          src="https://avatars2.githubusercontent.com/u/7400882?s=460&v=4"
+          alt="MichaelACosta Icon"
+          style={{ borderRadius: "50%", width: "40%" }}
+        />
+      </Col>
+      <Col xs={12} sm={4}>
+        <h1>Michael Costa</h1>
+        <p>
+          Software Developer at O.S. Systems, and master student in computing at
+          UFPel.
+        </p>
+        <span style={{ display: "block" }}>GitHub: MichaelACosta</span>
+        <span>macosta@inf.ufpel.edu.br</span>
+      </Col>
+    </Row>
   </Layout>
 )
 
