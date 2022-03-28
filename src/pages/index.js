@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/Seo"
 import { Row, Col } from "react-flexbox-grid"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Profile" />
+    <Seo title="Profile" />
     <Row
       center="xs"
       middle="xs"
