@@ -2,12 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { Text } from "../Text"
 
 const Header = ({ siteTitle }) => (
   <Head>
-    <Title>
+    <Text variant="big" fontWeight="600" textAlign="left">
       <RouterLink to="/">{siteTitle}</RouterLink>
-    </Title>
+    </Text>
   </Head>
 )
 
@@ -18,10 +19,6 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
-
-const Title = styled.h1`
-  margin: 0;
-`
 
 const RouterLink = styled(Link)`
   color: #b0b2c3;
