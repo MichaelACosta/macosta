@@ -1,20 +1,25 @@
 import React from "react"
 import styled from "styled-components"
-import { Row, Col } from "react-flexbox-grid"
+import { Row, Column } from "../components/Grid"
 import Wrapper from "../components/Wrapper/Wrapper"
 import Seo from "../components/Seo/Seo"
 
 const IndexPage = () => (
   <Wrapper>
     <Seo title="Profile" />
-    <RowBox center="xs" middle="xs">
-      <Col xs={12} sm={4}>
+    <Row mt={50} display={["block", "flex"]}>
+      <Column
+        width={["auto", "50%"]}
+        pl={["0", "5%"]}
+        pt={["0", "2%"]}
+        alignItems={["center", "left"]}
+      >
         <Image
           src="https://avatars2.githubusercontent.com/u/7400882?s=460&v=4"
           alt="MichaelACosta Icon"
         />
-      </Col>
-      <Col xs={12} sm={4}>
+      </Column>
+      <Column width={["100%", "50%"]} pr={["0", "5%"]}>
         <Title>Hi, I'm Michael Costa,</Title>
         <Text>
           Master in computing at UFPel and Front-end developer at CI&T, BR.
@@ -32,19 +37,15 @@ const IndexPage = () => (
           reduce the number of aborts and the execution time of applications
           that use STMs.
         </Text>
-      </Col>
-    </RowBox>
+      </Column>
+    </Row>
   </Wrapper>
 )
 
 const Image = styled.img`
   border: 5px solid #000;
   border-radius: 20%;
-  width: 60%;
-`
-
-const RowBox = styled(Row)`
-  margin-top: 50px;
+  width: 50%;
 `
 
 const Text = styled.p`
