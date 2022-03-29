@@ -1,36 +1,61 @@
 import React from "react"
-import Layout from "../components/layout"
-import Seo from "../components/Seo"
+import styled from "styled-components"
 import { Row, Col } from "react-flexbox-grid"
+import Wrapper from "../components/Wrapper/Wrapper"
+import Seo from "../components/Seo/Seo"
 
 const IndexPage = () => (
-  <Layout>
+  <Wrapper>
     <Seo title="Profile" />
-    <Row
-      center="xs"
-      middle="xs"
-      style={{
-        marginTop: 50,
-      }}
-    >
+    <RowBox center="xs" middle="xs">
       <Col xs={12} sm={4}>
-        <img
+        <Image
           src="https://avatars2.githubusercontent.com/u/7400882?s=460&v=4"
           alt="MichaelACosta Icon"
-          style={{ borderRadius: "50%", width: "40%" }}
         />
       </Col>
       <Col xs={12} sm={4}>
-        <h1>Michael Costa</h1>
-        <p>
-          Software Developer at O.S. Systems, and master student in computing at
-          UFPel.
-        </p>
-        <span style={{ display: "block" }}>GitHub: MichaelACosta</span>
-        <span>macosta@inf.ufpel.edu.br</span>
+        <Title>Hi, I'm Michael Costa,</Title>
+        <Text>
+          Master in computing at UFPel and Front-end developer at CI&T, BR.
+        </Text>
+        <Text>
+          I like to write code to optimize the performance of parallel systems
+          and create web applications in my spare time.
+        </Text>
+        <Text>
+          In my master's work was to propose and implement a scheduler for
+          transactional memories in software (STM) called Lups Transactional
+          Memory Scheduler (LTMS), in this work I raised and validated the
+          hypothesis that a thread scheduler that obtains context about the
+          execution of the application and of the hardware architecture used can
+          reduce the number of aborts and the execution time of applications
+          that use STMs.
+        </Text>
       </Col>
-    </Row>
-  </Layout>
+    </RowBox>
+  </Wrapper>
 )
+
+const Image = styled.img`
+  border: 5px solid #000;
+  border-radius: 20%;
+  width: 60%;
+`
+
+const RowBox = styled(Row)`
+  margin-top: 50px;
+`
+
+const Text = styled.p`
+  color: #f3f3f3;
+  text-align: left;
+  line-height: 20px;
+`
+
+const Title = styled.h1`
+  color: #b0b2c3;
+  text-align: left;
+`
 
 export default IndexPage

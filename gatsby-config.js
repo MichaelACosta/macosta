@@ -5,5 +5,5 @@ module.exports = {
     description: `This page is a profile made with gatsby.`,
     author: `@MicahelACosta`,
   },
-  plugins: [],
+  plugins: [`gatsby-plugin-styled-components`],
 }
