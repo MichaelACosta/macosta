@@ -28,7 +28,7 @@ const IndexPage = () => {
   return (
     <Wrapper>
       <Seo title="Profile" />
-      <Row mt={["50px", "100px"]} display={["block", "flex"]}>
+      <Row mt={["50px", "80px"]} display={["block", "flex"]}>
         {user && (
           <Column
             width={["auto", "50%"]}

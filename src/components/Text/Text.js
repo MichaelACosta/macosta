@@ -33,13 +33,13 @@ const Text = styled.p(
   variant({
     variants: {
       [BIG]: {
-        fontSize: 28,
+        fontSize: 26,
       },
       [MEDIUM]: {
-        fontSize: 24,
+        fontSize: 22,
       },
       [REGULAR]: {
-        fontSize: 20,
+        fontSize: 18,
       },
       [SMALL]: {
         fontSize: 16,
