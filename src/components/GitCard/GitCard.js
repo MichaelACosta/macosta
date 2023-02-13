@@ -1,34 +1,10 @@
 import React, { useState, useEffect } from "react"
-import { PieChart, PieArcSeries } from "reaviz"
-import { Row, Column } from "../Grid"
+import { Row } from "../Grid"
 import { Text } from "../Text"
 import { getRepos } from "../../Services/gitApi"
-
-const formatDataLanguages = (reposData) => {
-  const languages = reposData.map((repo) => repo.language)
-  const languagesListFormated = languages.reduce((object, item) => {
-    if (item === null) return object
-
-    if (!object.some(({ key }) => key === item))
-      object.push({ key: item, data: 1 })
-    else {
-      return object.map((language) =>
-        language.key === item
-          ? {
-              key: language.key,
-              data: language.data + 1,
-            }
-          : {
-              key: language.key,
-              data: language.data,
-            }
-      )
-    }
-    return object
-  }, [])
-
-  return languagesListFormated
-}
+import ChartContainer from "./ChartContainer"
+import BoxInformation from "./BoxInformation"
+import { formatDataLanguages } from "./Utils"
 
 const GitCard = ({ user, userName }) => {
   const [language, setLanguage] = useState([])
@@ -61,88 +37,11 @@ const GitCard = ({ user, userName }) => {
           mb={["5px", "0"]}
           mt={["10px", "0"]}
         >
-          {user?.followers && (
-            <Column width={["30%", "100%"]} m={["0", "0 auto"]}>
-              <Text
-                textAlign="center"
-                color="#b0b2c3"
-                variant={["regular", "medium"]}
-                fontWeight="600"
-              >
-                {user?.followers}
-              </Text>
-              <Text
-                textAlign="center"
-                color="#f3f3f3"
-                variant={["small", "regular"]}
-              >
-                Followers
-              </Text>
-            </Column>
-          )}
-          {user?.following && (
-            <Column width={["30%", "100%"]} m={["0", "0 auto"]}>
-              <Text
-                textAlign="center"
-                color="#b0b2c3"
-                variant={["regular", "medium"]}
-                fontWeight="600"
-              >
-                {user?.following}
-              </Text>
-              <Text
-                textAlign="center"
-                color="#f3f3f3"
-                variant={["small", "regular"]}
-              >
-                Following
-              </Text>
-            </Column>
-          )}
-          {user?.public_repos && (
-            <Column width={["30%", "100%"]} m={["0", "0 auto"]}>
-              <Text
-                textAlign="center"
-                color="#b0b2c3"
-                variant={["regular", "medium"]}
-                fontWeight="600"
-              >
-                {user?.public_repos}
-              </Text>
-              <Text
-                textAlign="center"
-                color="#f3f3f3"
-                variant={["small", "regular"]}
-              >
-                Repositories
-              </Text>
-            </Column>
-          )}
+          <BoxInformation value={user?.followers} label="Followers" />
+          <BoxInformation value={user?.following} label="Following" />
+          <BoxInformation value={user?.public_repos} label="Repositories" />
         </Row>
-        {language.length > 1 && (
-          <Column width={["100%", "50%"]} alignItems="center">
-            <PieChart
-              width={350}
-              height={250}
-              data={language}
-              series={
-                <PieArcSeries
-                  cornerRadius={4}
-                  padAngle={0.02}
-                  padRadius={200}
-                  doughnut={true}
-                />
-              }
-            />
-            <Text
-              textAlign="center"
-              color="#f3f3f3"
-              variant={["small", "regular"]}
-            >
-              Most used languages
-            </Text>
-          </Column>
-        )}
+        <ChartContainer values={language} label="Most used languages" />
       </Row>
     </Row>
   )
