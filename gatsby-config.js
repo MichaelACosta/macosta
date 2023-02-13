@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: `/macosta`,
   siteMetadata: {
-    title: `Michael Costa`,
+    title: `<Devs />`,
     description: `This page is a profile made with gatsby.`,
     author: `@MicahelACosta`,
   },
