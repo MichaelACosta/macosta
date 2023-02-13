@@ -63,6 +63,7 @@ const Image = styled.img`
   border: 5px solid #000;
   border-radius: 20%;
   width: 50%;
+  height: "auto";
 `
 
 export default Profile
