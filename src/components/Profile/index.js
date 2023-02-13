@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Row, Column } from "../Grid"
-import Loading from "../Loading"
 import { Text } from "../Text"
 import TextToBoby from "./TextToBody"
 
