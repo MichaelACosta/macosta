@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmaCosta=self.webpackChunkmaCosta||[]).push([[125],{3331:function(e,t,a){a.r(t);var n=a(6540),o=a(332),c=a(2166),l=a(9118);t.default=()=>n.createElement(o.A,null,n.createElement(c.A,{title:"not found"}),n.createElement(l.E,{variant:"big",color:"#b0b2c3",textAlign:"left",m:"20px 0",fontWeight:"600"},"Não encontramos o que você procura!"))}}]);
+//# sourceMappingURL=component---src-pages-404-js-634a8365048b69c97c84.js.map

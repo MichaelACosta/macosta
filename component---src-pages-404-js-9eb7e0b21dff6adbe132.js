@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmaCosta=self.webpackChunkmaCosta||[]).push([[883],{429:function(e,t,a){a.r(t);var n=a(7294),o=a(971),c=a(5094),l=a(2994);t.default=()=>n.createElement(o.Z,null,n.createElement(c.Z,{title:"not found"}),n.createElement(l.x,{variant:"big",color:"#b0b2c3",textAlign:"left",m:"20px 0",fontWeight:"600"},"Não encontramos o que você procura!"))}}]);
-//# sourceMappingURL=component---src-pages-404-js-9eb7e0b21dff6adbe132.js.map
