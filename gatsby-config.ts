@@ -1,4 +1,6 @@
-module.exports = {
+import type { GatsbyConfig } from "gatsby"
+
+const config: GatsbyConfig = {
   pathPrefix: `/macosta`,
   siteMetadata: {
     title: `<Devs />`,
@@ -27,3 +29,5 @@ module.exports = {
     },
   ],
 }
+
+export default config
