@@ -4,27 +4,30 @@
   "description": "My profile",
   "version": "0.3.0",
   "author": "Michael Costa <costa0ma@gmail.com>",
+  "engines": {
+    "node": ">=22.12.0 <26"
+  },
   "dependencies": {
-    "@types/node": "^22.10.0",
-    "@types/react": "^18.3.12",
-    "@types/styled-components": "^5.1.34",
-    "axios": "^1.7.8",
-    "babel-plugin-styled-components": "^2.1.4",
-    "gatsby": "^5.14.0",
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.17",
+    "@types/styled-components": "^5.1.36",
+    "axios": "^1.18.1",
+    "babel-plugin-styled-components": "^2.3.0",
+    "gatsby": "^5.16.1",
     "gatsby-omni-font-loader": "^2.0.2",
-    "gatsby-plugin-styled-components": "^6.14.0",
-    "gh-pages": "^6.2.0",
+    "gatsby-plugin-styled-components": "^6.16.0",
+    "gh-pages": "^6.3.0",
     "prop-types": "^15.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "react-helmet": "^6.1.0",
-    "reaviz": "^15.18.5",
-    "styled-components": "^6.1.13",
+    "reaviz": "^16.2.1",
+    "styled-components": "^6.4.3",
     "styled-system": "^5.1.5",
-    "typescript": "^5.7.2"
+    "typescript": "^7.0.2"
   },
   "devDependencies": {
-    "prettier": "^3.4.1"
+    "prettier": "^3.9.5"
   },
   "keywords": [
     "gatsby"
