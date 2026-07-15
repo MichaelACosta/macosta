@@ -33,15 +33,16 @@
 |---|------|------|------|
 | T1 | API do GitHub sem token (limite ~60 req/h por IP) | 🔄 | Avaliar: token em build-time (Gatsby source) ou cache estático gerado no build, em vez de fetch client-side |
 | T2 | Loader com delay fixo de 3s | ❌ | Remover delay artificial; loader só enquanto houver carregamento real |
-| T3 | `defaultProps` em componentes de função | 🔄 | Migrar para default parameters (padrão React moderno) |
+| T3 | `defaultProps` em componentes de função (`Seo.js`, `Text.js`, `Header.js`) | 🔄 | **Urgente:** `master` já está em React 19 (merge 15/07/2026), que emite warning de depreciação para `defaultProps` em componentes de função. Migrar para default parameters antes de mexer nesses componentes |
 | T4 | Sem testes (script placeholder) | 🔄 | Decidir: adicionar smoke tests mínimos ou remover script para não enganar |
 | T5 | `pathPrefix: /macosta` + `--prefix-paths` | ✅ | Manter se continuar no GitHub Pages; documentar no README |
-| T6 | Deploy gh-pages + GitLab CI (master) | 🔄 | Avaliar unificar pipeline (um só CI) |
-| T7 | reaviz (gráfico donut) | ✅/🔄 | Manter se GitCard continuar; reavaliar peso da lib no bundle |
+| T6 | Deploy gh-pages + GitLab CI (master) | 🔄 | Avaliar unificar pipeline (um só CI). Node agora fixado via `.nvmrc`/`engines` (22.x, `<26`) — usar essa versão em qualquer pipeline escolhido |
+| T7 | reaviz (gráfico donut) | 🔄 | `master` já subiu para reaviz 16.x (major, era 15.x) — **validar a API do donut** antes de reestilizar com os tokens do design spec (§5 GitCard) |
 | T8 | styled-components + styled-system | ✅/🔄 | Manter como base da UI; evoluir para **theming duplo (claro/escuro)** via ThemeProvider + tokens de tema |
 | T9 | SEO (react-helmet) | 🔄 | Atualizar title/description/og para o novo posicionamento (hoje descreve um dev); incluir `hreflang` pt-BR/en |
 | T10 | Tema único (escuro) | ➕ | Toggle claro/escuro com persistência (localStorage) e respeito a `prefers-color-scheme` |
 | T11 | Site monolíngue (PT-BR) | ➕ | i18n PT-BR/EN com alternância; avaliar `gatsby-plugin-react-i18next` ou dicionário próprio; conteúdo em arquivos de tradução, não hardcoded nos componentes |
+| T12 | TypeScript 5.7 → 7.0 + `moduleResolution: bundler` | 🔄 | Bump de duas majors já em `master`; verificar type-check ao criar os componentes novos (ThemeProvider, i18n, seções) antes de assumir compatibilidade |
 
 ---
 
