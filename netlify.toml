@@ -1,0 +1,12 @@
+[build]
+  # Netlify's framework build cache (.cache/) is shared across branches/PRs
+  # for this site and can go stale after removing a Gatsby plugin: a leftover
+  # generated file in .cache still requires the removed package during the
+  # webpack bundle step, even though node_modules is correctly reinstalled.
+  # Clearing .cache/public before every build trades some incremental-build
+  # speed for a build that's always correct.
+  command = "rm -rf .cache public && yarn build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "22"
