@@ -1,0 +1,35 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.separator {
+  color: var(--text-muted);
+  margin: 0 var(--space-1);
+}
+
+.active,
+.inactive {
+  text-decoration: none;
+  padding: var(--space-2);
+}
+
+.active {
+  color: var(--text);
+}
+
+.inactive {
+  color: var(--text-muted);
+}
+
+.inactive:hover,
+.inactive:focus-visible {
+  color: var(--text);
+}

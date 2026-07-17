@@ -1,0 +1,83 @@
+.section {
+  padding: var(--space-8) 0;
+  background: var(--surface-alt);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-9) 0;
+  }
+}
+
+.intro {
+  margin-top: var(--space-2);
+  max-width: 640px;
+}
+
+.badge {
+  margin-top: var(--space-4);
+}
+
+.chipGroups {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+  margin: var(--space-6) 0;
+}
+
+@media (min-width: 768px) {
+  .chipGroups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.groupLabel {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: var(--space-3);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.caseCard {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.caseName {
+  margin-bottom: var(--space-2);
+}
+
+.caseFields {
+  margin: var(--space-5) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.caseField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.caseFieldLabel {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.caseFieldValue {
+  margin: 0;
+}
+
+.pendingNote {
+  display: block;
+  margin-top: var(--space-5);
+}

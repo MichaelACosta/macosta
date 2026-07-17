@@ -1,0 +1,169 @@
+/* Tokens — keep in sync with lib/theme/tokens.ts (docs/05-design-spec.md §2) */
+:root,
+:root[data-theme="dark"] {
+  --bg: #0b1220;
+  --surface: #131c2e;
+  --surface-alt: #1b2740;
+  --text: #e8ecf4;
+  --text-muted: #9aa5bc;
+  --accent: #f2a33c;
+  --accent-contrast: #0b1220;
+  --border: #26314a;
+  --positive: #3fb47f;
+
+  --chart-1: var(--accent);
+  --chart-2: #5b8def;
+  --chart-3: #3e6bc4;
+  --chart-4: #2a4e96;
+  --chart-5: #26314a;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-alt: #eef1f6;
+  --text: #14213d;
+  --text-muted: #5a6478;
+  --accent: #c97e1a;
+  --accent-contrast: #ffffff;
+  --border: #d8dee9;
+  --positive: #2e8b62;
+
+  --chart-1: var(--accent);
+  --chart-2: #4c7ce0;
+  --chart-3: #3861b8;
+  --chart-4: #274a8e;
+  --chart-5: #d8dee9;
+
+  color-scheme: light;
+}
+
+:root {
+  --font-display: "Archivo Variable", "Archivo", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --radius: 8px;
+  --radius-pill: 999px;
+  --container-max: 1080px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 200ms ease-out,
+    color 200ms ease-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 48px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 100;
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-radius: 0 0 var(--radius) 0;
+  transition: top 150ms ease-out;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

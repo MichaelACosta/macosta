@@ -1,1 +1,0 @@
-export { GitCard } from "./GitCard"

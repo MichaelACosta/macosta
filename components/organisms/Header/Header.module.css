@@ -1,0 +1,38 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 56px;
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.logoLink {
+  text-decoration: none;
+}
+
+.nav {
+  display: none;
+  gap: var(--space-5);
+}
+
+@media (min-width: 900px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
