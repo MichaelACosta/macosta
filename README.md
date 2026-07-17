@@ -56,6 +56,6 @@ Node fixado via `.nvmrc`/`engines` (22.x).
 
 ## Simplificações conhecidas / pendências
 
-- **Assets do hero, favicon "de verdade" e og:image com foto**: o design spec pede uma foto do hero e um og:image 1200×630 — ainda não recebidos. Hoje o favicon é um monograma "MC" gerado em código (`app/icon.svg`) e o og:image é gerado dinamicamente (texto sobre navy, `app/[locale]/opengraph-image.tsx`); a foto do hero não foi incluída nesta versão.
+- **Favicon "de verdade" e og:image com foto**: o design spec pede um og:image 1200×630 com foto — ainda não recebido. Hoje o favicon é um monograma "MC" gerado em código (`app/icon.svg`) e o og:image é gerado dinamicamente (texto sobre navy, `app/[locale]/opengraph-image.tsx`). A foto do hero já foi incluída (`components/organisms/Hero/hero-photo.jpg`).
 - **GitCard**: dados buscados client-side direto da API pública do GitHub (sem token de build-time). Se a seção falhar (rate limit etc.), ela some da página em vez de quebrar — nunca há token para gerenciar como secret nesta v1.
 - **Link do repositório chefIA**: não incluído nesta versão (gate do backlog — US-22/E7), conforme decisão registrada em `docs/01-content-brief-copy.md`.

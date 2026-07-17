@@ -44,6 +44,7 @@ export interface Dictionary {
     subtitle: string
     ctaLinkedIn: string
     ctaEmail: string
+    photoAlt: string
   }
   whereIAddValue: {
     title: string
