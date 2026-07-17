@@ -30,6 +30,7 @@ export const pt = {
       "Conecto negócio, pessoas, portfólio e Inteligência Artificial para transformar estratégia em execução com previsibilidade, colaboração e geração contínua de valor.",
     ctaLinkedIn: "LinkedIn",
     ctaEmail: "E-mail",
+    photoAlt: "Foto de Michael Alexandre Costa",
   },
   whereIAddValue: {
     title: "Onde gero valor",
@@ -225,7 +226,7 @@ export const pt = {
     errorMessage: "Não foi possível carregar os dados do GitHub agora.",
   },
   footer: {
-    linkedInLabel: "linkedin.com/in/michaelalexandrecosta",
+    linkedInLabel: "linkedin.com/in/michael-alexandre-costa-9217b0b3",
     emailLabel: "costa0ma@gmail.com",
     location: "Camaquã, RS — Remoto",
     closingQuote:

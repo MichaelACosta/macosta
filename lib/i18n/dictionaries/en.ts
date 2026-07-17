@@ -30,6 +30,7 @@ export const en = {
       "I connect business, people, portfolio and Artificial Intelligence to turn strategy into execution — with predictability, collaboration and continuous value.",
     ctaLinkedIn: "LinkedIn",
     ctaEmail: "Email",
+    photoAlt: "Photo of Michael Alexandre Costa",
   },
   whereIAddValue: {
     title: "Where I add value",
@@ -225,7 +226,7 @@ export const en = {
     errorMessage: "Couldn't load GitHub data right now.",
   },
   footer: {
-    linkedInLabel: "linkedin.com/in/michaelalexandrecosta",
+    linkedInLabel: "linkedin.com/in/michael-alexandre-costa-9217b0b3",
     emailLabel: "costa0ma@gmail.com",
     location: "Camaquã, RS — Remote",
     closingQuote:

@@ -14,6 +14,7 @@ describe("Hero", () => {
     ).toBeInTheDocument()
     expect(screen.getByText(dictionary.headline)).toBeInTheDocument()
     expect(screen.getByText(dictionary.subtitle)).toBeInTheDocument()
+    expect(screen.getByRole("img", { name: dictionary.photoAlt })).toBeInTheDocument()
 
     expect(screen.getByRole("link", { name: dictionary.ctaLinkedIn })).toHaveAttribute(
       "href",
