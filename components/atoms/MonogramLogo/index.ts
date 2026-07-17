@@ -1,0 +1,1 @@
+export { MonogramLogo } from "./MonogramLogo"

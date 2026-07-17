@@ -1,0 +1,44 @@
+.station {
+  position: relative;
+  list-style: none;
+  padding-left: var(--space-6);
+  padding-bottom: var(--space-7);
+}
+
+.station:last-child {
+  padding-bottom: 0;
+}
+
+.dot {
+  position: absolute;
+  left: -5px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.name {
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.description {
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .station {
+    flex: 1;
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .dot {
+    left: 50%;
+    top: -22px;
+    transform: translateX(-50%);
+  }
+}

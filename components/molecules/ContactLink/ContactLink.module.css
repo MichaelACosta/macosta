@@ -1,0 +1,14 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 150ms ease-out;
+}
+
+a.link:hover,
+a.link:focus-visible {
+  color: var(--accent);
+}

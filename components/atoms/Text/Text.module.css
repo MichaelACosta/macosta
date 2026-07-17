@@ -1,0 +1,20 @@
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.body {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.muted {
+  color: var(--text-muted);
+}

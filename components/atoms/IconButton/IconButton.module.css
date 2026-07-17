@@ -1,0 +1,16 @@
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  color: var(--text);
+  transition:
+    color 150ms ease-out,
+    background-color 150ms ease-out;
+}
+
+.iconButton:hover {
+  color: var(--accent);
+}

@@ -1,0 +1,26 @@
+.rail {
+  position: absolute;
+  left: var(--space-3);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  z-index: -1;
+  background: var(--accent);
+  transform-origin: top;
+  animation: grow 600ms ease-out;
+}
+
+@media (min-width: 768px) {
+  .rail {
+    left: 0;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}

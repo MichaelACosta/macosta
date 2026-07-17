@@ -1,0 +1,28 @@
+.footer {
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: var(--space-9) 0;
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.quote {
+  max-width: 640px;
+  margin-top: var(--space-6);
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.copyright {
+  display: block;
+  margin-top: var(--space-6);
+}

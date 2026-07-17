@@ -1,0 +1,47 @@
+.section {
+  padding: var(--space-8) 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-9) 0;
+  }
+}
+
+.timeline {
+  position: relative;
+  list-style: none;
+  margin: var(--space-7) 0 0;
+  padding: 0 0 0 var(--space-2);
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+@media (min-width: 768px) {
+  .timeline {
+    display: flex;
+    padding: var(--space-6) 0 0;
+  }
+
+  .timeline::before {
+    left: 0;
+    right: 0;
+    top: 5px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+  }
+}
+
+.subline {
+  display: block;
+  margin-top: var(--space-2);
+}

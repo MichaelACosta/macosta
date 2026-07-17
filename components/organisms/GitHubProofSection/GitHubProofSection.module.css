@@ -1,0 +1,57 @@
+.section {
+  padding: var(--space-8) 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-9) 0;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+@media (min-width: 768px) {
+  .stats {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.numbers {
+  display: flex;
+  gap: var(--space-6);
+  margin: 0;
+}
+
+.numberItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.numberLabel {
+  order: 2;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.numberValue {
+  order: 1;
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-mono);
+  font-size: 28px;
+  color: var(--text);
+}
+
+.note {
+  display: block;
+  margin-top: var(--space-4);
+}

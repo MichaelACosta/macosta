@@ -1,0 +1,1 @@
+export { GitHubProofSection } from "./GitHubProofSection"
